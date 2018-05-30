@@ -1,0 +1,164 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,900');
+
+//VARIABLES
+$cream: #ffff9d;
+$papaya: #ff6138;
+$pale-blue: #beeb9f;
+$mid-blue: #79bd8f;
+$dark-grey: #222;
+
+$font-main: 'Montserrat', sans-serif;
+$font-special: 'Special Elite', cursive;
+
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  //Defines the setting of 1rem = 10px (10px/16 = 62.5%%)
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-main;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $cream;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3.2rem;
+  font-weight: 200;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 170%;
+  letter-spacing: .2px;
+}
+
+ul {
+  font-size: 1.4rem;
+  line-height: 200%;
+  list-style: none;
+  margin: 1rem;
+  
+}
+
+a {
+  text-decoration: underline transparent;
+  display: block;
+  color: $mid-blue;
+  font-size: 1.4rem;
+  //line-height: 200%;
+  margin: auto 3rem;
+  transition: all .2s ease-in;
+  
+  &:hover {
+    color: $dark-grey;
+    text-decoration: underline $dark-grey;
+  }
+  
+  &:active {
+    color: $cream;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+.nav {
+  display: inline-flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  background-color: rgba($papaya, 0.5);
+  justify-content: space-between;
+  box-shadow: 0 3px 5px rgba(3,3,3,0.1);
+  overflow: hidden;
+  
+  
+  &__div {
+    display: inline-flex;
+    width: 100%;
+    height: 5.5rem;
+    justify-content: space-between;
+    
+    &--title {
+      display: block;
+      margin: auto 3rem;
+      color: $pale-blue;
+      width: 50%;   
+      font-family: $font-special;
+      font-size: 2rem;
+    
+    }
+    
+    &--links {
+      display: inherit;
+      width: 50%;
+      justify-content: flex-end;
+      
+    }
+  }
+
+  
+  &__span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: -moz-linear-gradient(left, rgba(255,255,157,0.01) 0%, rgba(190,235,159,0.6) 45%, rgba(190,235,159,0.8) 76%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(255,255,157,0.01) 0%,rgba(190,235,159,0.6) 45%,rgba(190,235,159,0.8) 76%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(255,255,157,0.01) 0%,rgba(190,235,159,0.6) 45%,rgba(190,235,159,0.8) 76%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    
+  }
+  
+}
+
+header {
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80vh;
+  background-image: linear-gradient(to right bottom, rgba($papaya,.6),rgba($pale-blue,.5)), url('rawpixel-609022-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  justify-content: center;
+  
+  & h1 {
+    font-size: 14rem;
+    font-weight: 300;
+    text-align: center;
+    color: $cream;
+    text-shadow: 2px 4px 5px rgba(3,3,3,0.3);
+  }
+  
+  
+}
+
+
+
+
