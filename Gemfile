@@ -48,7 +48,7 @@ end
 
 group :production do
   # Use PostGres database in production when deployed to Heroku
-  gem 'pg'
+  gem 'pg', '~> 0.20'
   
   gem 'rails_12factor'
 
