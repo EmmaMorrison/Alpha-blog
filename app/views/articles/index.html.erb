@@ -1,15 +1,31 @@
-<h1>Blog</h1>
+<body>
+  <nav class="nav">
+    <div class="nav__div">
+      <div class="nav__div--title">
+      alpha blog
+    </div>
+    <div class="nav__div--links">
+      <%= link_to 'home', root_path %>
+      <%= link_to "create new blog post", new_article_path %>
+    </div>
+    </div>
+     <span class="nav__span"></span>
+  </nav>
+  
+  <header>
+    <h1>[ The List ]</h1>
+  </header>  
 
-<p>Most recent blog posts are below.</p>
-
-<p><%= link_to "Create new blog post", new_article_path %></p>
-
-<div>
-  <% @articles.each do |article| %>
-  <div>
-    <h2><%= article.title %></h2>
-    <p><%= article.description %></p>
-    <p><%= link_to 'Read on...', article_path(article) %>  <%= link_to 'Edit this article', edit_article_path(article) %></p>
-  </div>
-  <% end %>
-</div>
+  <main>
+    <div class="main__index">
+      <% @articles.each do |article| %>
+      <div class="main__index--bloglist">
+        <h2><%= article.title %></h2>
+        <p><%= article.description %></p>
+        <span class="main__index--span "><%= link_to 'Read on...', article_path(article) %> <%= link_to 'Edit this article', edit_article_path(article) %>  <%= link_to 'Delete post', article_path(article), method: :delete, data: {confirm: 'Are you sure?'} %></span>
+      </div>
+      <% end %>
+    </div>
+  </main>
+  
+</body>

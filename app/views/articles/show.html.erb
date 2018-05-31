@@ -1,9 +1,34 @@
-<h1><%= @article.title %></h1>
-<h5><%= @article.created_at %></h5>
+<body>
+  <nav class="nav">
+    <div class="nav__div">
+      <div class="nav__div--title">
+      alpha blog
+      </div>
+      <div class="nav__div--links">
+        <%= link_to 'home', root_path %>
+        <%= link_to 'edit this blog post', edit_article_path(@article) %>
+        <%= link_to 'back to blog list', articles_path %>       
+      </div>
+    </div>
+    <span class="nav__span"></span>
+  </nav>
+  
+  <header>
+    <h1><%= @article.title %></h1>
+  </header>
+  <main>
+    
 
-<h3><%= @article.description %></h3>
+    <h5>Submitted on: <%= @article.created_at %></h5>
 
-<p><%= @article.blog_article %></p>
+    <h3><%= @article.description %></h3>
 
-<p><%= link_to 'Edit this article', edit_article_path(@article) %></p>
-<p><%= link_to 'Go back', articles_path %></p>
+    <p><%= @article.blog_article %></p>
+
+
+  </main>
+</body>
+
+
+
+
