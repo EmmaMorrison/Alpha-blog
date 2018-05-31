@@ -1,5 +1,14 @@
 <h2>Create new article</h2>
 
+<% if @article.errors.any? %>
+<h4>Sorry! There were errors in your submission. Please review and correct the following:</h4>
+<ul>
+  <% @article.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
+
 <%= form_for @article do |f| %>
   <p>
     <%= f.label :title %> &nbsp;
