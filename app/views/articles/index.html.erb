@@ -1,0 +1,15 @@
+<h1>Blog</h1>
+
+<p>Most recent blog posts are below.</p>
+
+<p><%= link_to "Create new blog post", new_article_path %></p>
+
+<div>
+  <% @articles.each do |article| %>
+  <div>
+    <h2><%= article.title %></h2>
+    <p><%= article.description %></p>
+    <p><%= link_to 'Read on...', article_path(article) %>  <%= link_to 'Edit this article', edit_article_path(article) %></p>
+  </div>
+  <% end %>
+</div>

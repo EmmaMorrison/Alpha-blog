@@ -4,3 +4,6 @@
 <h3><%= @article.description %></h3>
 
 <p><%= @article.blog_article %></p>
+
+<p><%= link_to 'Edit this article', edit_article_path(@article) %></p>
+<p><%= link_to 'Go back', articles_path %></p>
