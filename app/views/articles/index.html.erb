@@ -2,17 +2,16 @@
   <nav class="nav">
     <div class="nav__div">
       <div class="nav__div--title">
-      alpha blog
-    </div>
+       <%= link_to 'a blog', root_path %>
+      </div>
     <div class="nav__div--links">
-      <%= link_to 'home', root_path %>
       <%= link_to "create new blog post", new_article_path %>
     </div>
     </div>
      <span class="nav__span"></span>
   </nav>
   
-  <header>
+  <header class="home">
     <h1>[ The List ]</h1>
   </header>  
 
@@ -22,7 +21,7 @@
       <div class="main__index--bloglist">
         <h2><%= article.title %></h2>
         <p><%= article.description %></p>
-        <span class="main__index--span "><%= link_to 'Read on...', article_path(article) %> <%= link_to 'Edit this article', edit_article_path(article) %>  <%= link_to 'Delete post', article_path(article), method: :delete, data: {confirm: 'Are you sure?'} %></span>
+        <span class="main__index--span "><%= link_to 'Read on...', article_path(article) %> | <%= link_to 'Edit this article', edit_article_path(article) %> | <%= link_to 'Delete post', article_path(article), method: :delete, data: {confirm: 'Are you sure?'} %></span>
       </div>
       <% end %>
     </div>

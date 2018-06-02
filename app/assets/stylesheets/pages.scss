@@ -2,72 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url('https://fonts.googleapis.com/css?family=Special+Elite');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,900');
 
 //VARIABLES
 $cream: #ffff9d;
 $papaya: #ff6138;
 $pale-blue: #beeb9f;
 $mid-blue: #79bd8f;
-$dark-grey: #222;
+$dark-grey: #333;
 
 $font-main: 'Montserrat', sans-serif;
 $font-special: 'Special Elite', cursive;
 
 
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  //Defines the setting of 1rem = 10px (10px/16 = 62.5%%)
-  font-size: 62.5%;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: $font-main;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: $cream;
-}
-
-h1 {
-  font-size: 5rem;
-  font-weight: 200;
-  text-transform: uppercase;
-}
-
-h2 {
-  font-size: 3.2rem;
-  font-weight: 200;
-}
-
-p {
-  font-size: 1.4rem;
-  line-height: 170%;
-  letter-spacing: .2px;
-}
-
-ul {
-  font-size: 1.4rem;
-  line-height: 200%;
-  list-style: none;
-  margin: 1rem;
-  
-}
-
 a {
   text-decoration: underline transparent;
   display: block;
-  color: $mid-blue;
+  color: $pale-blue;
   font-size: 1.4rem;
   //line-height: 200%;
   margin: auto 3rem;
@@ -109,9 +60,17 @@ a {
       display: block;
       margin: auto 3rem;
       color: $pale-blue;
-      width: 50%;   
-      font-family: $font-special;
-      font-size: 2rem;
+              
+      
+      & a {
+        font-family: $font-special;
+        font-size: 2.5rem;
+      }
+      
+      & a:hover {
+        color: $papaya;
+        text-decoration: none;
+      }
     
     }
     
@@ -136,7 +95,7 @@ a {
   
 }
 
-header {
+.home {
   display:flex;
   flex-direction: column;
   width: 100%;
@@ -152,7 +111,6 @@ header {
     font-size: 14rem;
     font-weight: 300;
     text-align: center;
-    color: $cream;
     text-shadow: 2px 4px 5px rgba(3,3,3,0.3);
   }
   
@@ -163,13 +121,10 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 1.5rem auto;
   padding: 3rem;
+  width: 70%;
   
-  & h2 {
-    text-align: center;
-    font-size: 4rem;
-    color: $mid-blue;
-  }
 }
 
 

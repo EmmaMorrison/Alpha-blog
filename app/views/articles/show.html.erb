@@ -2,10 +2,9 @@
   <nav class="nav">
     <div class="nav__div">
       <div class="nav__div--title">
-      alpha blog
+       <%= link_to 'a blog', root_path %>
       </div>
       <div class="nav__div--links">
-        <%= link_to 'home', root_path %>
         <%= link_to 'edit this blog post', edit_article_path(@article) %>
         <%= link_to 'back to blog list', articles_path %>       
       </div>
@@ -13,18 +12,17 @@
     <span class="nav__span"></span>
   </nav>
   
-  <header>
+  <header class="blog">
     <h1><%= @article.title %></h1>
+
+    <h3 class="description"><%= @article.description %></h3>
+    <h5 class="datetime">Submitted on: <%= @article.created_at %></h5>
   </header>
   <main>
+    <div class="show">
+      <%= @article.blog_article %>
+    </div>
     
-
-    <h5>Submitted on: <%= @article.created_at %></h5>
-
-    <h3><%= @article.description %></h3>
-
-    <p><%= @article.blog_article %></p>
-
 
   </main>
 </body>

@@ -1,7 +1,18 @@
 <body>
-  <h2>Edit blog post</h2>
+  <nav class="nav">
+    <div class="nav__div">
+      <div class="nav__div--title">
+       <%= link_to 'a blog', root_path %>
+      </div>
+    <div class="nav__div--links">
+      <%= link_to 'Back to blog list', articles_path %>
+    </div>
+    </div>
+     <span class="nav__span"></span>
+  </nav>
   
-  <main>
+  <main class="main_new_edit">
+    <h2>Edit blog post</h2>
     <div class="main__form">
       <%= render 'form' %>
     </div>  

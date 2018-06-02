@@ -3,21 +3,21 @@
   <nav class="nav">
     <div class="nav__div">
       <div class="nav__div--title">
-        alpha blog
+        <%= link_to 'a blog', root_path %>
       </div>
       <div class="nav__div--links">
-        <%= link_to 'home', root_path %>
+<!--         <%= link_to 'home', root_path %> -->
         <%= link_to 'blog list', articles_path %>
       </div>
     </div>
     <span class="nav__span"></span>
   </nav>
   
-  <header>
-    <h1>[ A. Blog ]</h1>   
+  <header class="home">
+    <h1>[ A Blog ]</h1>   
   </header>
   <main>
-    <h2>Welcome to my blog, built with Ruby on Rails!</h2>
+    <h2>Welcome to my blog!</h2>
   </main>
   <footer>
   </footer>  

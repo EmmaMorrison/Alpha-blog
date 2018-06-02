@@ -9,20 +9,18 @@
 
 <%= form_for @article do |f| %>
   <p>
-    <%= f.label :title %> &nbsp;
+    <%= f.label(:title, "Title of Blog Post:") %> &nbsp;
     <%= f.text_field :title %>
   </p>
   <p>
-    <%= f.label :description %> &nbsp;
+    <%= f.label(:description, "Brief overview:") %> &nbsp;
     <%= f.text_field :description %>
   </p>
   <p>
-      <%= f.text_area :blog_article %>
+     <%= f.text_area :blog_article %>
   </p>
   <p>
-    <%= f.submit %>
+    <%= f.submit("Submit!") %>
   </p>
 
 <% end %>
-
-<p><%= link_to 'Go back', articles_path %></p>
